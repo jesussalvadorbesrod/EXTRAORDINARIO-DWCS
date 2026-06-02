@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Clases.OperacionesUnidad06" targetNamespace="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="Clases.OperacionesUnidad06Port">
+    <operation name="getPosicion">
+      <documentation>Dada una posici&#xF3;n de un jugador devuelve un
+
+array con el nombre y apellidos de los jugadores
+que coincidan en esa posici&#xF3;n</documentation>
+      <input message="tns:getPosicionIn"/>
+      <output message="tns:getPosicionOut"/>
+    </operation>
+  </portType>
+  <binding name="Clases.OperacionesUnidad06Binding" type="tns:Clases.OperacionesUnidad06Port">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getPosicion">
+      <soap:operation soapAction="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php#getPosicion"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="getPosicionIn">
+    <part name="posicion" type="xsd:string"/>
+  </message>
+  <message name="getPosicionOut">
+    <part name="return" type="soap-enc:Array"/>
+  </message>
+  <service name="Clases.OperacionesUnidad06Service">
+    <port name="Clases.OperacionesUnidad06Port" binding="tns:Clases.OperacionesUnidad06Binding">
+      <soap:address location="http://localhost/EXTRAORDINARIO-DWCS/UNIDAD-06/servidorSoap/servidor.php"/>
+    </port>
+  </service>
+</definitions>

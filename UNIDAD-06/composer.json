@@ -1,0 +1,32 @@
+{
+    "name": "usuario/practica",
+    "description": "Practica Unidad 5, parte 2",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        },
+        "audit": {
+            "block-insecure": false
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    },
+    "license": "GNU/GPL",
+    "authors": [
+        {
+            "name": "usuario",
+            "email": "usuario@correo.es"
+        }
+    ],
+    "require": {
+        "milon/barcode": "^6.0",
+        "fzaninotto/faker": "^1.5",
+        "philo/laravel-blade": "^3.1",
+        "php2wsdl/php2wsdl": "^0.7.0"
+    }
+}
