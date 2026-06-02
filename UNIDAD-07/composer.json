@@ -1,0 +1,20 @@
+{
+    "name": "jesussalvadorbesrod/unidad-07",
+    "description": "Descripción del proyecto",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jesus",
+            "email": "jesussalvadorbesrod@iesrodeira.gal"
+        }
+    ],
+    "require": {
+        "jaxon-php/jaxon-core": "^5.7",
+        "yepsua/jquery4php": "^1.7"
+    }
+}
