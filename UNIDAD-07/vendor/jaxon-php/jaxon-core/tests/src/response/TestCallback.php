@@ -1,0 +1,28 @@
+<?php
+
+use Jaxon\App\FuncComponent;
+use Jaxon\Exception\AppException;
+
+class TestCallback extends FuncComponent
+{
+    public function simple()
+    {
+        $this->response()->alert('This is the global response!');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function error()
+    {
+        throw new Exception('This method throws an exception!');
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function app()
+    {
+        throw new AppException('This method throws an exception!');
+    }
+}
