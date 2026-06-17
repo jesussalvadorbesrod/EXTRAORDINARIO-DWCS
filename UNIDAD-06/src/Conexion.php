@@ -16,7 +16,7 @@ class Conexion
 
     public function __construct()
     {
-        $this->host = "localhost";
+        $this->host = "localhost:3307";
         $this->db   = "examen06";
         $this->user = "admin06";
         $this->pass = "secreto";
